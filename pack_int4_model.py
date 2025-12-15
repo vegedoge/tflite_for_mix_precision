@@ -87,6 +87,8 @@ def quantize_and_pack_weights(tensor, buffer_obj):
 
     print(f" > Success: {num_weights} int8 -> {packed_len} packed int4 bytes.")
 
+    return 16.0  # return scale factor
+
 
 def post_process_to_int4(input_path, output_path):
     print("--- 开始 INT4 打包后处理 ---")
